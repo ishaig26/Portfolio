@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISHA's Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<style>
+  /* Global Styles */
+  body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; }
+  header, footer { background-color: #333; color: white; text-align: center; padding: 1em 0; }
+  nav { background-color: #444; overflow: hidden; }
+  nav a { float: left; display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none; }
+  nav a:hover { background-color: #ddd; color: black; }
+  .container { padding: 20px; }
+  .page { display: none; }
+  .active { display: block; }
+  img { max-width: 100%; height: auto; }
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    nav a { float: none; width: 100%; }
+  }
+  #projects img {
+    width: 30%; /* Use the full width of the container */
+    height: auto; /* Set auto height to maintain aspect ratio */
+    object-fit: cover; /* Cover the container without stretching the image */
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Portfolio</h1>
+</header>
+<nav>
+  <a href="#about" onclick="showPage('about')">About Me</a>
+  <a href="#contact" onclick="showPage('contact')">Contact</a>
+  <a href="#projects" onclick="showPage('projects')">Projects</a>
+</nav>
+<div id="about" class="container page active">
+  <h2>About Me</h2>
+  <p>I am Isha, an ambitious  student at SMIT, Sikkim  .</p>
+  <img src=" ./Home/img.jpg" alt="Profile photo">
+</div>
+<div id="contact" class="container page">
+  <h2>Contact Information</h2>
+  <p>Email: ishaig26@gmail.com</p>
+  <p>WhatsApp: 6206442250</p>
+</div>
+<div id="projects" class="container page">
+  <h2>Current Projects</h2>
+  <p>I am currently working on an innovative Image Food Recognition project.</p>
+  <img src="https://www.tekrevol.com/blogs/wp-content/uploads/2021/03/Calorie-Mama-1.jpg" alt="Food Image Recognition">
+  <h3>Advantages of Food Image Recognition</h3>
+  <ul>
+    <li>Automated Nutritional Tracking: Simplifies the process of logging and analyzing dietary intake.</li>
+    <li>Enhanced Dietary Awareness: Encourages healthier eating habits by providing instant nutritional information.</li>
+    <li>Personalized Diet Plans: Assists in creating diet plans based on individual health goals and preferences.</li>
+    <li>Preventive Health Care: Aids in the prevention of lifestyle-related diseases by monitoring food choices.</li>
+  </ul>
+</div>
+<footer>
+  <p>Connect with me on social media!</p>
+  <a href="https://www.facebook.com/share/GVtAzrBk9AB373Yz/?mibextid=qi2Omg" class="fab fa-facebook-f"></a>
+  <a href="https://www.instagram.com/isharaj0726?utm_source=qr&igsh=MmczbW90YTN1dnZk" class="fab fa-insta"></a>
+  <a href="https://www.linkedin.com/in/isha-gupta-430484247" class="fab fa-linkedin-in"></a>
+</footer>
+<script>
+  // JavaScript to handle page switching
+  function showPage(pageId) {
+    var pages = document.querySelectorAll('.page');
+    pages.forEach(function(page) {
+      page.classList.remove('active');
+    });
+    document.getElementById(pageId).classList.add('active');
+  }
+</script>
+</body>
+</html>
